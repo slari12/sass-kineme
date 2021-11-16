@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@mixin flexCenter($direction, $color){
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    flex-direction: $direction;
+    background-color: $color;
+}
+header{
+    @include flexCenter(column, #0A1931);
+    color: $texColor;
+    button{
+        width: 150px;
+        height: 45px;
+
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 21px;
+        background: $primaryBtn;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        margin-top: none;
+
+        &:hover{
+           background-color: white ;
+           color: #0A1931;
+           transform: scale(1.1);
+           transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+           .btn{
+                transform: translateY(-50%) rotate(0);
+                &::after{
+                        transform: translateY(0);
+                }
+           }
+        }
+    }
+    h1{
+        color: $texColor;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 60px;
+    }
+} 
